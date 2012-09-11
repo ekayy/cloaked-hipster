@@ -14,10 +14,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		if params[:id].nil? && current_user
-    	@user = current_user
-  	else
-    	@user = User.find(params[:id])
-  	end
+    @user = User.find(params[:id])
+    @dishes = @user.dishes  	
 	end
 end

@@ -1,0 +1,10 @@
+<div class="dish <%= 'done' if @dish.get('completed') %>">
+	<div class="display">
+		<div class="dish-text"><%= @dish.get('name') %></div>
+		<span class="dish-destroy"></span>
+	</div>
+  <div class="edit">
+    <input class="dish-input" type="text" value="" />
+  </div>
+</div>
+

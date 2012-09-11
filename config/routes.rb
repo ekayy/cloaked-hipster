@@ -1,9 +1,15 @@
 Wespot::Application.routes.draw do
+  get "main/index"
+
   devise_for :users, :path => 'accounts', path_names: {sign_in: "login", sign_out: "logout"} 
 
   resources :users
 
-  
+  scope "api" do
+    resources :dishes
+  end
+
+  root to: "main#index"
 
 
 

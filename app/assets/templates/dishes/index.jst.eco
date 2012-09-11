@@ -1,0 +1,17 @@
+<div id="dishapp">
+
+	<div id="name">
+		<h1 style="color:black;">Dishes</h1>		
+	</div>
+
+	<div class="content">
+
+		<div id="create-dish">
+			<input id="new-dish" placeholder="Add a dish" type="text" />
+		</div>
+
+		<div id="dishes">
+			<ul id="dish-list"></ul>
+		</div>
+
+</div>
