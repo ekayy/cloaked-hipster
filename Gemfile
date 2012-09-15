@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'thin'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'fog', "~> 1.3.1"
 gem 'devise'
 gem 'backbone-on-rails'
+gem 'instagram'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

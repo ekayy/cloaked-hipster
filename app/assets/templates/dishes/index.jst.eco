@@ -1,7 +1,9 @@
+<div id="light" class="lightbox">
+
 <div id="dishapp">
 
 	<div id="name">
-		<h1 style="color:black;">Dishes</h1>		
+		<h1>Dishes</h1>		
 	</div>
 
 	<div class="content">
@@ -14,4 +16,7 @@
 			<ul id="dish-list"></ul>
 		</div>
 
+<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
 </div>
+
+	</div>

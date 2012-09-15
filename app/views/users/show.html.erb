@@ -1,18 +1,4 @@
-<body style="<%= show_user_bg %>">
-
-<div class="nav2">
-  <div class="nav2-title">
-		<h1><%= @user.profile.title %></h1>
-	</div>
-	<div class="nav2-links">  
-    <ul>
-      <li><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Menu</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
-</div>
-
-
+<!-- <body style="<%= show_user_bg %>"> -->
 
 <div id="light" class="lightbox">
   <h2>Menu</h2>
@@ -22,7 +8,7 @@
     </ul>
  
     <div id="tabs-1">
-      <ul>
+      <ul id="dish-list">
 			<% @dishes.each do |dish| %>
 			  <li><%= dish.name %></li>
 			  <% end %>
@@ -34,3 +20,27 @@
 <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
 </div>  
 <div id="fade" class="black_overlay"></div>
+
+<%= render 'main/nav2' %>
+
+<body style="background: transparent url(http://www.toddswanderings.com/wp-content/uploads/2010/11/Izakaya.jpg); -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;"></body>
+
+
+
+<!--     <div id="title">
+        <h1>Setai Grill</h1>
+    </div> -->
+<!-- <div id="thumbnails">
+  <ul>
+    <li>
+      <a href="<%= @user.profile.image.url %>">
+      </a>
+    </li>
+    </ul>
+    <div id="pointer"></div>
+</div>
+<div id="pause"><a href="#">Paused</a></div>
+    <div id="volume" class="all"><a href="#">Sounds</a></div> -->

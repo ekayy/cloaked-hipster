@@ -2,7 +2,7 @@ class DishesController < ApplicationController
 	respond_to :json
 
   def index
-    respond_with Dish.all
+    respond_with current_user.dishes
     # if signed_in?
     #   respond_with current_user.task_feed
     # end
