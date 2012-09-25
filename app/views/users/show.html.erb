@@ -1,5 +1,16 @@
 <!-- <body style="<%= show_user_bg %>"> -->
 
+<!-- <body style="background: transparent url(http://www.toddswanderings.com/wp-content/uploads/2010/11/Izakaya.jpg); -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;"></body> -->
+
+<script>$.backstretch(["http://www.toddswanderings.com/wp-content/uploads/2010/11/Izakaya.jpg","http://24.media.tumblr.com/tumblr_m9lzzcoCYm1qd3l0io1_1280.jpg"], {duration: 8000});</script>
+
+<%# raw @user.profile.image.url %>
+
+<%= render 'main/nav2' %>
+
 <div id="light" class="lightbox">
   <h2>Menu</h2>
   <div id="tabs">
@@ -16,31 +27,14 @@
     </div>
   </div>
 
-
 <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
 </div>  
 <div id="fade" class="black_overlay"></div>
 
-<%= render 'main/nav2' %>
-
-<body style="background: transparent url(http://www.toddswanderings.com/wp-content/uploads/2010/11/Izakaya.jpg); -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;"></body>
 
 
+  <%#  <% @instagram.each do |instagram| %>
 
-<!--     <div id="title">
-        <h1>Setai Grill</h1>
-    </div> -->
-<!-- <div id="thumbnails">
-  <ul>
-    <li>
-      <a href="<%= @user.profile.image.url %>">
-      </a>
-    </li>
-    </ul>
-    <div id="pointer"></div>
-</div>
-<div id="pause"><a href="#">Paused</a></div>
-    <div id="volume" class="all"><a href="#">Sounds</a></div> -->
+  <%# <%= image_tag instagram.images.first.last.url %>
+
+ <%# <% end %>

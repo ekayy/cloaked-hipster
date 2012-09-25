@@ -22,4 +22,4 @@
 //= require_tree .//views
 //= require_tree .//routers
 //= require_tree .
-//= require_tree ../../../vendor/assets/javascripts
+//= require ../../../vendor/assets/javascripts/jquery.backstretch.min

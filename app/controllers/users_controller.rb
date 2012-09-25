@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 	def show
     @user = User.find(params[:id])
     @dishes = @user.dishes  	
+    @instagram = Instagram.media_popular
     # respond_with current_user.profile.find(params[:id])
 	end
 

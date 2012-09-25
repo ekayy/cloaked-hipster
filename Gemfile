@@ -8,12 +8,14 @@ gem 'fog', "~> 1.3.1"
 gem 'devise'
 gem 'backbone-on-rails'
 gem 'instagram'
+gem "nifty-generators", :group => :development
+gem 'geocoder'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.5'
+  gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '0.5.5'
   gem 'guard-spork', '0.3.2'
@@ -38,7 +40,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg'
 end
 
 # To use ActiveModel has_secure_password
