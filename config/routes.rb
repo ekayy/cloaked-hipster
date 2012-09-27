@@ -9,7 +9,7 @@ Wespot::Application.routes.draw do
     resources :dishes
   end
 
-  root to: "main#index"
+  root to: "users#index"
 
 
 

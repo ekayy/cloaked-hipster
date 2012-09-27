@@ -5,6 +5,7 @@ gem 'thin'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'fog', "~> 1.3.1"
+gem 'rmagick'
 gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'backbone-on-rails'
 gem 'instagram'
