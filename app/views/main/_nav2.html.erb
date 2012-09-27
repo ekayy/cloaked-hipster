@@ -1,18 +1,15 @@
 <div class="nav2">
   <div class="nav2-title">
-    <h1><%= @user.profile.title %></h1>
+    <h1><%= @user.profile.business_name %></h1>
   </div>
   <div class="nav2-links">  
     <ul>
       <li><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Menu</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block'">Contact</a></li>
     </ul>
   </div>
 </div>
 
-<div id="light" class="lightbox">
 
-<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
-</div>
 </div>  
 <div id="fade" class="black_overlay"></div>

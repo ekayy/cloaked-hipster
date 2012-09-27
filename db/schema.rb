@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120907215344) do
+ActiveRecord::Schema.define(:version => 20120926050636) do
 
   create_table "dishes", :force => true do |t|
     t.integer  "user_id"
@@ -22,10 +22,18 @@ ActiveRecord::Schema.define(:version => 20120907215344) do
 
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
-    t.string   "title"
     t.string   "image"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "business_name"
+    t.string   "street"
+    t.string   "city"
+    t.string   "zip"
+    t.string   "state"
+    t.string   "country"
+    t.string   "phone"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "users", :force => true do |t|

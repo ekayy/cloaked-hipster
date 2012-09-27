@@ -1,13 +1,10 @@
+<% provide(:title, @user.profile.business_name) %>
+
 <!-- <body style="<%= show_user_bg %>"> -->
 
-<!-- <body style="background: transparent url(http://www.toddswanderings.com/wp-content/uploads/2010/11/Izakaya.jpg); -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;"></body> -->
+<button id="image1">Click 1</button>
+  <button id="image2">Click 2</button>
 
-<script>$.backstretch(["http://www.toddswanderings.com/wp-content/uploads/2010/11/Izakaya.jpg","http://24.media.tumblr.com/tumblr_m9lzzcoCYm1qd3l0io1_1280.jpg"], {duration: 8000});</script>
-
-<%# raw @user.profile.image.url %>
 
 <%= render 'main/nav2' %>
 
@@ -27,10 +24,28 @@
     </div>
   </div>
 
-<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
 </div>  
-<div id="fade" class="black_overlay"></div>
 
+
+<div id="light2" class="lightbox">
+  <h2>Contact</h2>
+  <%= @user.profile.address %>
+  <a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+</div>
+
+
+
+<script src="jquery.backstretch.min.js"></script>
+<script>$("#image1").click(function(e) {
+    e.preventDefault();
+    $.backstretch('http://www.toddswanderings.com/wp-content/uploads/2010/11/Izakaya.jpg');
+  });
+  $("#image2").click(function(e) {
+    e.preventDefault();
+    $.backstretch('http://dl.dropbox.com/u/515046/www/cheers.jpg');
+  });</script>
+  <%# raw @user.profile.image.url %>
 
 
   <%#  <% @instagram.each do |instagram| %>

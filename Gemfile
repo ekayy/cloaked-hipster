@@ -5,10 +5,9 @@ gem 'thin'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'fog', "~> 1.3.1"
-gem 'devise'
+gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'backbone-on-rails'
 gem 'instagram'
-gem "nifty-generators", :group => :development
 gem 'geocoder'
 
 # Bundle edge Rails instead:
@@ -35,6 +34,7 @@ gem 'best_in_place'
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '4.1.0'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
 end

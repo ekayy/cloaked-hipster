@@ -1,7 +1,7 @@
 Wespot::Application.routes.draw do
   get "main/index"
 
-  devise_for :users, :path => 'accounts', path_names: {sign_in: "login", sign_out: "logout"} 
+  devise_for :users, :controllers => { :registrations => "users/registrations" }, :path => 'accounts', path_names: {sign_in: "login", sign_out: "logout"} 
 
   resources :users
 

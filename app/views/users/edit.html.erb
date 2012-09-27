@@ -1,11 +1,42 @@
-<%= form_for @user, :url => user_path, :html => {:multipart => true} do |f| %>
+<% provide(:title, 'Customize') %>
+<h1>Customize</h1>
+<div class="container-fluid">
+ 
+  	
 
-	<%= f.label :title %>
-    <%= f.text_field :title %>
+<div class="row-fluid">
+    <div class="span8">
+    	<h2>Business Information</h2>
+      
+      <%= form_for @user, :url => user_path, :html => {:multipart => true} do |f| %>
 
-    <%= f.file_field :image %>
+				<%= f.label :business_name %>
+		    <%= f.text_field :business_name %>
 
-  <%= f.submit %>
+				<%= f.label :street %>
+		    <%= f.text_field :street %>
+
+		    <%= f.label :city %>
+		    <%= f.text_field :city %>
+
+		    <%= f.label :state %>
+		    <%= f.text_field :state %>
+
+		    <%= f.label :zip %>
+		    <%= f.text_field :zip %>
+
+    </div>
+    
+    <div class="span4">
+			<h2>Upload Photos</h2>
+			<%= f.label :image %>
+			<%= f.file_field :image %>
+			<%= f.label :image %>
+			<%= f.file_field :image %>
+			<%= f.label :image %>
+			<%= f.file_field :image %>
+	</div>
+</div>
+<%= f.submit "Update Profile", class: "btn btn-large btn-primary" %>
 <% end %>
-
-
+</div>

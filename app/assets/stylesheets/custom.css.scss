@@ -35,6 +35,10 @@ textarea {
   }
 }
 
+.two-col {
+width: 620px;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,7 +50,6 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  color:white;
 }
 
 h2 {
@@ -55,7 +58,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: #999;
 }
 
 p {
@@ -66,20 +69,18 @@ p {
 .nav2 {
   color:white;
   float: left;
-  min-width: 150px;
-  max-width: 540px;
-  
   position: fixed;
   top: 15%;
   left: 15%;
-
+  right: auto;
+  overflow:visible;
   .nav2-title {
     background-color: rgba(4, 7, 60, .82);
-    padding: 20px 0 10px 20px;
-    overflow:hidden;
+    padding: 20px 20px 10px 20px;
+    min-width: 150px;
+    max-width: 540px;
+    width:auto;
     h1 {
-      float:left;
-      text-align: center;
       color:white;
       margin: 0;
     }
@@ -87,6 +88,7 @@ p {
   .nav2-links {
     background-color: rgba(0, 0, 0, .82);
     padding: 20px;
+    width:auto;
     ul {
       margin: 0;
       padding: 0;
@@ -152,13 +154,20 @@ footer {
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
+input, input[type="email"], input[type="text"], input[type="password"], textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   padding: 10px;
   height: auto !important;
-  margin-bottom: 15px;
-  @include box_sizing;
+  margin-bottom: 20px;
+  font-size: 16px;
+  @include box_sizing; 
+}
+
+label {
+  font-size: 13px;
+  font-weight: bold;
+  
 }
 
 #error_explanation {
