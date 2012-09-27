@@ -8,7 +8,6 @@ class AddContactToProfiles < ActiveRecord::Migration
       t.string :state
       t.string :country
       t.string :phone
-      t.remove :title
     end
   end
 end
