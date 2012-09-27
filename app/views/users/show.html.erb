@@ -1,10 +1,6 @@
 <% provide(:title, @user.profile.business_name) %>
 
-<!-- <body style="<%= show_user_bg %>"> -->
-
-<button id="image1">Click 1</button>
-  <button id="image2">Click 2</button>
-
+<body style="<%= show_user_bg %>">
 
 <%= render 'main/nav2' %>
 
@@ -28,28 +24,30 @@
 </div>  
 
 
-<div id="light2" class="lightbox">
+<div id="light2" class="lightbox2">
   <h2>Contact</h2>
-  <%= @user.profile.address %>
+  <%= @user.profile.address %><br/>
+  <% for instagram in @instagram.data %>
+  <a href="<%= instagram.images.standard_resolution.url %>"><%= image_tag instagram.images.thumbnail.url %></a>
+<% end %>
   <a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
 </div>
 
-
+<div class="control">
+<button id="image1">1</button>
+<button id="image2">2</button>
+</div>
 
 <script src="jquery.backstretch.min.js"></script>
 <script>$("#image1").click(function(e) {
     e.preventDefault();
-    $.backstretch('http://www.toddswanderings.com/wp-content/uploads/2010/11/Izakaya.jpg');
+    $.backstretch('<%= raw @user.profile.image.url %>');
   });
   $("#image2").click(function(e) {
     e.preventDefault();
-    $.backstretch('http://dl.dropbox.com/u/515046/www/cheers.jpg');
+    $.backstretch('<%= raw @user.profile.image2.url %>');
   });</script>
+
   <%# raw @user.profile.image.url %>
 
 
-  <%#  <% @instagram.each do |instagram| %>
-
-  <%# <%= image_tag instagram.images.first.last.url %>
-
- <%# <% end %>

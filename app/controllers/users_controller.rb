@@ -1,11 +1,10 @@
 
 class UsersController < ApplicationController
-
-  before_filter :authenticate_user!
   respond_to :json
   
   def edit
   	@user = current_user.profile
+    # @instagram = Instagram.media_search(User.find(params[:id]).profile.latitude, User.find(params[:id]).profile.longitude)
   end
 
   def update
@@ -22,8 +21,7 @@ class UsersController < ApplicationController
 	def show
     @user = User.find(params[:id])
     @dishes = @user.dishes  	
-    # @instagram = Instagram.media_search("37", "-122")
-      # @instagram = Instagram.media_popular
+    @instagram = Instagram.media_search(@user.profile.latitude, @user.profile.longitude)
     # respond_with current_user.profile.find(params[:id])
 	end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120926050636) do
+ActiveRecord::Schema.define(:version => 20120927062736) do
 
   create_table "dishes", :force => true do |t|
     t.integer  "user_id"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20120926050636) do
     t.string   "phone"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "image2"
+    t.string   "image3"
   end
 
   create_table "users", :force => true do |t|
