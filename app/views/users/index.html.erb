@@ -1,13 +1,14 @@
 <%= provide(:title, 'Search') %>
 <h1>Search</h1>
 
-<div class="row-fluid">
-	<ul class="thumbnails">
-	<% @user.each do |user| %>
-		<li class="span4">
-		<a href="#" class="thumbnail"><%= link_to image_tag(user.profile.image_url(:thumb).to_s), user_path(user) %></a></li>
+<div id="wrapper">
+	<div class="row-fluid">
+		<ul class="thumbnails">
+		<% @user.each do |user| %>
+			<li>
+			<%= link_to image_tag(user.profile.image_url(:thumb).to_s), user_path(user) %></li>
 
-	<% end %>
-	</div>
-
-</div>  
+		<% end %>
+		</div>
+	</div>  
+</div>

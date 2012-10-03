@@ -27,9 +27,6 @@
 <div id="light2" class="lightbox2">
   <h2>Contact</h2>
   <%= @user.profile.address %><br/>
-  <% for instagram in @instagram.data %>
-  <a href="<%= instagram.images.standard_resolution.url %>"><%= image_tag instagram.images.thumbnail.url %></a>
-<% end %>
   <a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
 </div>
 
@@ -38,7 +35,7 @@
 <button id="image2">2</button>
 </div>
 
-<script src="jquery.backstretch.min.js"></script>
+
 <script>$("#image1").click(function(e) {
     e.preventDefault();
     $.backstretch('<%= raw @user.profile.image.url %>');
@@ -50,4 +47,13 @@
 
   <%# raw @user.profile.image.url %>
 
-
+<div id="sidebar">
+<% for instagram in @instagram.data %>
+  <ul>
+    <li>
+ <a href="<%= instagram.images.standard_resolution.url %>">
+ <%= image_tag instagram.images.thumbnail.url %></a>
+  </li>
+</ul>
+<% end %>
+</div>

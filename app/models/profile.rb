@@ -9,7 +9,16 @@ class Profile < ActiveRecord::Base
 	geocoded_by :address
 	after_validation :geocode
 
+  validates_presence_of :business_name, :street, :city, :zip
+
 	def address
   	"#{self.street}, #{self.city}, #{self.state}, #{self.zip}"
 	end
+
+private
+  # def reprocess_image
+  #   User.all.each do |user|
+  #     user.profile.image.recreate_versions!
+  #   end
+  # end
 end

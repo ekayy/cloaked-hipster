@@ -1,3 +1,4 @@
+$navbarHeight: 30px;
 @import "bootstrap";
 
 /* mixins, variables, etc. */
@@ -37,6 +38,21 @@ textarea {
 
 .two-col {
 width: 620px;
+}
+
+#wrapper {
+  position: relative;
+  width: auto;
+  min-width: 50%;
+  margin: 0 auto;
+}
+
+#sidebar {
+  float:right;
+  width:200px;
+  ul {
+    list-style:none;
+  }
 }
 
 /* typography */
@@ -125,6 +141,8 @@ p {
     text-decoration: none;
   }
 }
+
+
 
 /* footer */
 

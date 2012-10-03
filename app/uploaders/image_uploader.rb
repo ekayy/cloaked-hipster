@@ -3,8 +3,8 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  # include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
   # include Sprockets::Helpers::RailsHelper
@@ -34,9 +34,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  
+
+process :resize_to_limit => [-1,1050]
+process :convert => 'jpg'
+
   version :thumb do
-    process :resize_to_limit => [300, 200]
+    process :resize_to_fill => [300, 200]
+    process :convert => 'jpg'
   end
 
 

@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   has_one :profile, :dependent => :destroy
   has_many :dishes, :dependent => :destroy
-  accepts_nested_attributes_for :profile
+  accepts_nested_attributes_for :profile, allow_destroy: true
 
   before_create :build_profile
   before_save { |user| user.email = email.downcase }

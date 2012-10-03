@@ -5,17 +5,18 @@ gem 'thin'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'fog', "~> 1.3.1"
-gem 'rmagick'
+gem 'mini_magick'
 gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'backbone-on-rails'
 gem 'instagram'
 gem 'geocoder'
+gem 'pg'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'sqlite3'
+  # gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '0.5.5'
   gem 'guard-spork', '0.3.2'
@@ -40,9 +41,6 @@ group :test do
   gem 'libnotify', '0.5.9'
 end
 
-group :production do
-  gem 'pg'
-end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
