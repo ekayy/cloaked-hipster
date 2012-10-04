@@ -40,6 +40,10 @@ textarea {
 width: 620px;
 }
 
+#dialog {
+  width: 940px;
+}
+
 #wrapper {
   position: relative;
   width: auto;
@@ -172,7 +176,7 @@ footer {
 
 /* forms */
 
-input, input[type="email"], input[type="text"], input[type="password"], textarea, select, .uneditable-input {
+/*input, input[type="email"], input[type="text"], input[type="password"], textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   padding: 10px;
@@ -181,6 +185,7 @@ input, input[type="email"], input[type="text"], input[type="password"], textarea
   font-size: 16px;
   @include box_sizing; 
 }
+*/
 
 label {
   font-size: 13px;
@@ -381,7 +386,7 @@ label {
 }
 
 .control {
-  position: absolute;
+  position: fixed;
   bottom: 15%;
   right: 20%;
 }

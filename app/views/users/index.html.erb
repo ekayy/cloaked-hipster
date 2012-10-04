@@ -1,13 +1,20 @@
 <%= provide(:title, 'Search') %>
-<h1>Search</h1>
+
+<div class="container">
+	<div class="center">
+	<%= form_tag users_path, :method => 'get', :class =>  "form-inline form-search" do %>
+		<%= text_field_tag :query, params[:query], :placeholder => "Search", :class => "search-query" %>
+		<%= submit_tag "Search", :name => nil, :class => "btn" %>
+	<% end %>
+	</div>
+</div>
 
 <div id="wrapper">
 	<div class="row-fluid">
 		<ul class="thumbnails">
-		<% @user.each do |user| %>
+		<% @users.each do |user| %>
 			<li>
 			<%= link_to image_tag(user.profile.image_url(:thumb).to_s), user_path(user) %></li>
-
 		<% end %>
 		</div>
 	</div>  

@@ -15,7 +15,14 @@ class User < ActiveRecord::Base
   before_create :build_profile
   before_save { |user| user.email = email.downcase }
 
-  # def dish_feed
-  #   Dish.where("user_id = ?", id)
-  # end
+  acts_as_taggable
+  ActsAsTaggableOn.remove_unused_tags = true
+
+  def self.text_search(query)
+    if query.present?
+      joins(:profile).where("business_name @@ :q", q: query) | joins(:profile).tagged_with(query)
+    else
+      scoped
+    end
+  end
 end

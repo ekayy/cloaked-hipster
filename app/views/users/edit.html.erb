@@ -11,22 +11,24 @@
 
 						<%= f.fields_for :profile do |builder| %>
 
-						<%= builder.label :business_name %>
-				    <%= builder.text_field :business_name %>
+							<%= builder.label :tag_list, "Tags (separated by commas)" %>
+					    <%= builder.text_field :tag_list %>
 
-						<%= builder.label :street %>
-				    <%= builder.text_field :street %>
+							<%= builder.label :business_name %>
+					    <%= builder.text_field :business_name %>
 
-				    <%= builder.label :city %>
-				    <%= builder.text_field :city %>
+							<%= builder.label :street %>
+					    <%= builder.text_field :street %>
 
-				    <%= builder.label :state %>
-				    <%= builder.text_field :state %>
+					    <%= builder.label :city %>
+					    <%= builder.text_field :city %>
 
-				    <%= builder.label :zip %>
-				    <%= builder.text_field :zip %>
+					    <%= builder.label :state %>
+					    <%= builder.text_field :state %>
 
-					
+					    <%= builder.label :zip %>
+					    <%= builder.text_field :zip %>
+
 	    </div>
 	    
 	    <div class="span4">
