@@ -4,6 +4,8 @@
 
 <%= render 'main/nav2' %>
 
+<%= @user.tags %>
+
 <div id="light" class="lightbox">
   <h2>Menu</h2>
   <div id="tabs">
@@ -33,17 +35,23 @@
 <div class="control">
 <button id="image1">1</button>
 <button id="image2">2</button>
+<button id="image2">3</button>
 </div>
 
 
-<script>$("#image1").click(function(e) {
+<script>
+  $("#image1").click(function(e) {
     e.preventDefault();
     $.backstretch('<%= raw @user.profile.image.url %>');
   });
   $("#image2").click(function(e) {
     e.preventDefault();
     $.backstretch('<%= raw @user.profile.image2.url %>');
-  });</script>
+  $("#image3").click(function(e) {
+    e.preventDefault();
+    $.backstretch('<%= raw @user.profile.image3.url %>');
+  });
+  </script>
 
   <%# raw @user.profile.image.url %>
 

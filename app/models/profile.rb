@@ -1,5 +1,5 @@
 class Profile < ActiveRecord::Base
-  attr_accessible :business_name, :image, :image2, :image3, :street, :city, :zip, :state, :country, :phone, :latitude, :longitude, :address, :tag_list
+  attr_accessible :business_name, :image, :image2, :image3, :street, :city, :zip, :state, :country, :phone, :latitude, :longitude, :address
 
   belongs_to :user
   mount_uploader :image, ImageUploader
@@ -15,8 +15,13 @@ class Profile < ActiveRecord::Base
   	"#{self.street}, #{self.city}, #{self.state}, #{self.zip}"
 	end
 
-  acts_as_taggable
-  ActsAsTaggableOn.remove_unused_tags = true
+  def self.text_search(query)
+    if query.present?
+      where("business_name @@ :q", q: query) | tagged_with(query)
+    else
+      scoped
+    end
+  end
 
 private
   # def reprocess_image
