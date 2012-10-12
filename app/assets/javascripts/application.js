@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.autocomplete
 //= require bootstrap
 //= require underscore
 //= require backbone
@@ -22,4 +23,4 @@
 //= require_tree .//views
 //= require_tree .//routers
 //= require_tree .
-//= require ../../../vendor/assets/javascripts/jquery.backstretch.min
+//= require_tree ../../../vendor/assets/javascripts/
