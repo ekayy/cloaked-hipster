@@ -15,7 +15,4 @@ class User < ActiveRecord::Base
   before_create :build_profile
   before_save { |user| user.email = email.downcase }
 
-  acts_as_taggable
-  ActsAsTaggableOn.remove_unused_tags = true
-
 end
