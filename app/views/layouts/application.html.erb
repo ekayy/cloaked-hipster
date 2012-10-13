@@ -2,10 +2,30 @@
 <html>
 <head>
   <title>WeSpot | <%= yield(:title) %></title>
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+	$(function() {
+		var addresspicker = $( "#addresspicker" ).addresspicker();
+		var addresspickerMap = $( "#addresspicker_map" ).addresspicker({
+			regionBias: "fr",
+		  elements: {
+		    map:      "#map",
+		    lat:      "#lat",
+		    lng:      "#lng",
+		    locality: '#locality',
+		    country:  '#country',
+        type:    '#type' 
+		  }
+		});
+
+
+	});
+	</script>
 </head> 
 <body>
 
@@ -20,4 +40,5 @@
 <div class="debug"><%= debug(params) if Rails.env.development? %></div>
 
 </body>
+<%= yield :scripts %>
 </html>

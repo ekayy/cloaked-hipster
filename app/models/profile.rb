@@ -15,8 +15,20 @@ class Profile < ActiveRecord::Base
   	"#{self.street}, #{self.city}, #{self.state}, #{self.zip}"
 	end
 
+  def self.text_search(query)
+    if query.present?
+      where("business_name @@ :q", q: query) | tagged_with(query)
+    else
+      scoped
+    end
+  end
+  
   acts_as_taggable
-  ActsAsTaggableOn.remove_unused_tags = true
+  
+  acts_as_gmappable
+  def gmaps4rails_address
+    "#{self.street}, #{self.city}, #{self.state}, #{self.zip}"
+  end
 
 private
   # def reprocess_image

@@ -10,6 +10,7 @@ gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'backbone-on-rails'
 gem 'instagram'
 gem 'geocoder'
+gem 'gmaps4rails'
 gem 'pg'
 gem 'acts-as-taggable-on'
 gem 'jquery-rails', '2.0.2'
@@ -34,6 +35,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'jquery-ui-rails'
   gem 'sass-rails',   '3.2.5'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'

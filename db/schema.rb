@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121003202047) do
+ActiveRecord::Schema.define(:version => 20121013041315) do
 
   create_table "dishes", :force => true do |t|
     t.integer  "user_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20121003202047) do
     t.float    "longitude"
     t.string   "image2"
     t.string   "image3"
+    t.boolean  "gmaps"
   end
 
   create_table "taggings", :force => true do |t|
