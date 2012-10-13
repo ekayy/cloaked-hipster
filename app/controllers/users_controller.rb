@@ -31,6 +31,7 @@ class UsersController < ApplicationController
 	end
 
   def index
+    @json = Profile.all.to_gmaps4rails
     # @users = User.text_search(params[:query])
     if params[:query_location].present?
       @users = Profile.near(params[:query_location], 15, :order => :distance).text_search(params[:query])

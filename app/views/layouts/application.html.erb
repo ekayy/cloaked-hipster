@@ -22,9 +22,7 @@
         type:    '#type' 
 		  }
 		});
-		var gmarker = addresspickerMap.addresspicker( "marker");
-		gmarker.setVisible(true);
-		addresspickerMap.addresspicker( "updatePosition");
+
 
 	});
 	</script>
@@ -42,4 +40,5 @@
 <div class="debug"><%= debug(params) if Rails.env.development? %></div>
 
 </body>
+<%= yield :scripts %>
 </html>

@@ -23,6 +23,11 @@ class Profile < ActiveRecord::Base
     end
   end
 
+  acts_as_gmappable
+  def gmaps4rails_address
+    "#{self.street}, #{self.city}, #{self.state}, #{self.zip}"
+  end
+
 private
   # def reprocess_image
   #   User.all.each do |user|

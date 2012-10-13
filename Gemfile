@@ -10,7 +10,7 @@ gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'backbone-on-rails'
 gem 'instagram'
 gem 'geocoder'
-
+gem 'gmaps4rails'
 gem 'pg'
 gem 'acts-as-taggable-on'
 gem 'jquery-rails', '2.0.2'
