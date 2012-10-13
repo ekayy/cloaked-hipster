@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :profile_attributes
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :profile_attributes, :tag_list
 
   has_one :profile, :dependent => :destroy
   has_many :dishes, :dependent => :destroy
@@ -18,11 +18,4 @@ class User < ActiveRecord::Base
   acts_as_taggable
   ActsAsTaggableOn.remove_unused_tags = true
 
-  def self.text_search(query)
-    if query.present?
-      joins(:profile).where("business_name @@ :q", q: query) | joins(:profile).tagged_with(query)
-    else
-      scoped
-    end
-  end
 end

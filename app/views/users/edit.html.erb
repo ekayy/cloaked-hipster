@@ -9,10 +9,10 @@
 	      
 	      <%= form_for @user, :html => {:multipart => true} do |f| %>
 
+					<%= f.label :tag_list, "Tags (separated by commas)" %>
+					<%= f.text_field :tag_list %>
+					
 						<%= f.fields_for :profile do |builder| %>
-
-							<%= builder.label :tag_list, "Tags (separated by commas)" %>
-					    <%= builder.text_field :tag_list %>
 
 							<%= builder.label :business_name %>
 					    <%= builder.text_field :business_name %>
