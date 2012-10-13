@@ -1,3 +1,8 @@
+@media (min-width: 600px) { #wrapper { width: 615px;margin:0 auto;} }
+@media (min-width: 900px) { #wrapper { width: 920px;margin:0 auto;} }
+@media (min-width: 1200px) { #wrapper { width: 1225px;margin:0 auto;} }
+@media (min-width: 1600px) { #wrapper { width: 1530px;margin:0 auto;} }
+
 $navbarHeight: 30px;
 @import "bootstrap";
 
@@ -44,13 +49,6 @@ width: 620px;
   width: 940px;
 }
 
-#wrapper {
-  position: relative;
-  width: auto;
-  min-width: 50%;
-  margin: 0 auto;
-}
-
 #sidebar {
   float:right;
   width:200px;
@@ -95,7 +93,8 @@ p {
   right: auto;
   overflow:visible;
   .nav2-title {
-    background-color: rgba(4, 7, 60, .82);
+    
+
     padding: 20px 20px 10px 20px;
     min-width: 150px;
     max-width: 540px;
@@ -395,7 +394,28 @@ label {
   clear:both;
 }
 
+.thumbnails > li {
+  float: left;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
 
+.thumb {
+  position: relative;
+}
+.span {
+  
+}
+.moreInfo {
+  position:absolute;
+  width:100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .62);
+  text-align: center;
+  a {
+    color:white;
+  }
+}
 
 
 
