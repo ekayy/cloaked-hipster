@@ -22,7 +22,9 @@ class Profile < ActiveRecord::Base
       scoped
     end
   end
-
+  
+  acts_as_taggable
+  
   acts_as_gmappable
   def gmaps4rails_address
     "#{self.street}, #{self.city}, #{self.state}, #{self.zip}"
